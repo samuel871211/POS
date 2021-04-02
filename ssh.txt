@@ -1,0 +1,18 @@
+ 終端機透過ssh連線到aws ec2：
+
+cd .ssh
+
+ssh -i "pos_backend.pem" ubuntu@ec2-3-87-152-99.compute-1.amazonaws.com
+
+將本機端的檔案push到aws ec2的/var/www/html路徑：
+
+cd .ssh
+
+chmod 400 pos_backend.pem
+
+scp -i "pos_backend.pem" ‪‪‪壓縮檔路徑 ubuntu@ec2-3-87-152-99.compute-1.amazonaws.com:/home/ubuntu
+
+上傳資料夾，可以先壓縮，到虛擬機再解壓縮
+rar x archive.rar path/to/extract/to
+例如：
+rar x backstage.rar /var/www/html

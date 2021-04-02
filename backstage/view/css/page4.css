@@ -1,0 +1,169 @@
+* {
+	box-sizing: border-box
+}
+body {
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	font-family: Roboto;
+	background: #f1f1f1;
+	margin: 0;
+}
+.header{
+	width: 100%;
+	height: 10vh;
+}
+.headerpic{
+	width: 100%;
+	position: relative;
+}
+.logo{
+	position: absolute;
+	top: 3px;
+	left: 30px;
+	width: 12%;
+}
+.bottom{
+	width: 100%;
+	height: 90vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background-color: #E5E5E5;
+}
+.buttons{
+	text-align:center;
+}
+.input_placeholder{
+	outline:none;
+	/*給妳設計*/
+}
+#name,#phone,#birth{
+	outline:none;
+	/*給妳設計*/
+}
+.buttons button{
+	outline:none;
+	/*給妳設計*/
+}
+#insert{
+	display:none;
+}
+.status_container{
+	text-align:center;
+}
+.status{
+	/*給妳設計*/
+}
+.gray{
+	width: 100%;
+	position:fixed;
+	top:0;
+	bottom:0;
+	background-color:#808080;
+	opacity:0.6;
+}
+.more2{
+	position:fixed;
+	top:50%;
+	left:50%;
+	border-radius: 10%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 80%;
+}
+.more2 table{
+	border-collapse: collapse;
+	table-layout:fixed;
+	font-size: 24px;
+	width: 100%;
+	/*height: 100%;*/
+}
+.more2 td{
+	background-color: #f1f1f1;
+	text-align: center;
+}
+.more2 th{
+	background-color: #f1f1f1;
+	padding-top:2%;
+	padding-bottom:2%; 
+}
+.more {
+	position:fixed;
+	top:50%;
+	left:50%;
+	border-radius: 10%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 80%;
+}
+.moreleft{
+	width: 35%;
+	height: 100%;
+	float: left;
+	background-color: #f1f1f1;
+	font-size: 24px;
+}
+.moreleft img{
+	width: 30%;
+	margin-left: 50%;
+	margin-top: 10%;
+	transform: translate(-50%);
+}
+.info{
+	width: 80%;
+	height: 80%;
+	margin-top: 5%;
+	margin-left: 10%;
+}
+.moreright{
+	float: left;
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+.more table{
+	border-collapse: collapse;
+	font-size: 24px;
+	width: 100%;
+	height: 100%;
+
+}
+.more th{
+	background-color: #f1f1f1;
+	width: 100%;
+	height: 70px;
+	text-align: left;
+}
+.more td{
+	background-color: #f1f1f1;
+	text-align: center;
+	width: 125px;
+	height: 70px;
+}
+.showhistory{
+	background: #274C77;
+	border: none; 
+	border-radius: 20px;
+	width: 250px;
+	height: 70px;
+
+	color: white;
+	font-size: 24px;
+	line-height: 70px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.back{
+	background-color: #274C77;
+	border: none; 
+	/*border-radius: 20px;
+	width: 250px;
+	height: 70px;*/
+	color: white;
+	font-size: 24px;
+	line-height: 70px;
+	text-align: center;
+	vertical-align: middle;
+}

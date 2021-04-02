@@ -1,0 +1,44 @@
+sudo apt-get update -y
+
+sudo apt-get install -y apt-transport-https
+
+curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+
+
+
+sudo apt update
+
+sudo apt -y upgrade
+
+sudo apt install -y python3-pip
+
+
+
+sudo apt-get install mariadb-server
+
+sudo apt-get install libmariadbclient-dev
+
+sudo apt-get install libmysqlclient-dev
+
+
+
+sudo apt-get update -y
+
+sudo apt-get install -y libmariadb-dev
+
+
+
+pip3 install mariadb
+
+
+
+# install lamp
+#https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04#step-3-%E2%80%94-securing-your-phpmyadmin-instance
+#instead of using systemlct, you can use 【sudo service apache2 start】
+#設定軟連結sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+#To set up your password for the first time:SET PASSWORD = PASSWORD('your_new_password');
+
+
+
+
+

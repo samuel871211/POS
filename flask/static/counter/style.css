@@ -1,0 +1,236 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 0px;
+  background-color: #ededed;
+}
+
+#left_area {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 65%;
+  height: 100%;
+  font-size: 20px;
+  /*border:1px solid black;*/
+  overflow: hidden;
+}
+
+#right_area {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 35%;
+  height: 100%;
+  font-size: 20px;
+  /*border:1px solid black;*/
+  overflow: hidden;
+}
+
+#next {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  font-size: 16px;
+}
+
+#left_top_area,
+#right_top_area {
+  height: 15%;
+  width: 100%;
+  font-size: 0px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+#left_bottom_area,
+#right_bottom_area {
+  height: 85%;
+  width: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+#item_table_container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+#item_table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+#item_table th {
+  border: 1px solid black;
+  border-top: none;
+}
+
+#item_table td {
+  text-align: center;
+  border: 1px solid black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.special_price {
+  color: red;
+}
+
+#output_area {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-left: 1%;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#xy {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 100%;
+  width: 80%;
+  padding-left: 1%;
+  font-weight: bold;
+  font-size: 50px;
+  overflow: hidden;
+}
+
+#xy div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#member {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20%;
+  height: 100%;
+  padding-right: 1%;
+  font-weight: bold;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+#member div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  width: 30%;
+  padding: 0;
+  margin: 1%;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #17bdff;
+}
+
+.buttons:active {
+  background-color: #007bff;
+}
+
+.row {
+  height: 14%;
+  display: flex;
+  justify-content: center;
+}
+
+.original_price {
+  text-decoration: line-through;
+}
+
+.special_price {
+  color: red;
+}
+
+#grayBackground {
+  opacity: 0.6;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #808080;
+}
+
+#transparent {
+  opacity: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+}
+
+#retrieve {
+  position: fixed;
+  top: 10%;
+  bottom: 10%;
+  left: 15%;
+  right: 15%;
+  background-color: white;
+}
+
+#retrieve_table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+#retrieve_table th,
+td {
+  border: 1px solid black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#retrieve_buttons {
+  font-size: 0px;
+}
+
+#retrieve_cancel,
+#retrieve_confirm {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  width: 35%;
+  position: fixed;
+  bottom: 10%;
+  border: 1px solid black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#retrieve_cancel {
+  left: 15%;
+}
+
+#retrieve_confirm {
+  right: 15%;
+}
+
+#selectItemWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}

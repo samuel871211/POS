@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>櫃台人員畫面</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="/static/favicon.ico" rel="shortcut icon">
+  <link rel="stylesheet" type="text/css" href="static/counter/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </link>
+  <meta name="usernameHash" content="{{ usernameHash }}">
+</head>
+
+<body>
+  <div id="left_area">
+    <div id="left_top_area">
+      <div id="xy">
+        <div style="visibility:hidden">
+          商品共<b id="x">0</b>件，合計<b id="y">0</b>元
+        </div>
+      </div>
+      <div id="member">
+        <div></div>
+      </div>
+    </div>
+    <div id="left_bottom_area">
+      <div id="item_table_container">
+        <table id="item_table">
+          <tr>
+            <th width="10%">項目</th>
+            <th width="30%">商品名稱</th>
+            <th width="10%">數量</th>
+            <th width="10%">原價</th>
+            <th width="10%">特價</th>
+            <th width="30%">優惠促銷</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="right_area">
+    <div id="right_top_area">
+      <div id="output_area"></div>
+      <div id="next">
+        <i class="fa fa-arrow-circle-right fa-5x" onclick="window.location.assign('http://'+window.location.hostname+'/backstage')"></i>
+      </div>
+    </div>
+    <div id="right_bottom_area">
+      <div class="row">
+        <div class="buttons" onclick="trades.cash()">現金</div>
+        <div class="buttons" onclick="trades.card('credit')">信用卡</div>
+        <div class="buttons" onclick="trades.card('easycard')">悠遊卡</div>
+      </div>
+      <div class="row">
+        <div class="buttons" onclick="trades.dump()">保留交易</div>
+        <div class="buttons" onclick="trades.retrieve()">回復交易</div>
+        <div class="buttons" onclick="trades.add('d')">清除輸入</div>
+      </div>
+      <div class="row">
+        <div class="buttons" onclick="trades.newTrade('取消')">取消交易</div>
+        <div class="buttons" onclick="trades.add()">取消付款</div>
+        <div class="buttons" onclick="trades.addAmount()">數量</div>
+      </div>
+      <div class="row">
+        <div class="buttons" onclick="trades.add('1')">1</div>
+        <div class="buttons" onclick="trades.add('2')">2</div>
+        <div class="buttons" onclick="trades.add('3')">3</div>
+      </div>
+      <div class="row">
+        <div class="buttons" onclick="trades.add('4')">4</div>
+        <div class="buttons" onclick="trades.add('5')">5</div>
+        <div class="buttons" onclick="trades.add('6')">6</div>
+      </div>
+      <div class="row">
+        <div class="buttons" onclick="trades.add('7')">7</div>
+        <div class="buttons" onclick="trades.add('8')">8</div>
+        <div class="buttons" onclick="trades.add('9')">9</div>
+      </div>
+      <div class="row">
+        <div class="buttons" onclick="trades.add('←')">←</div>
+        <div class="buttons" onclick="trades.add('0')">0</div>
+        <div class="buttons" onclick="trades.add('↲')">↲</div>
+      </div>
+    </div>
+  </div>
+  <div id="grayBackground" style="display:none" onclick="trades.closeWindows()"></div>
+  <div id="transparent" style="display:none"></div>
+  <div id="retrieve" style="display:none">
+    <table id="retrieve_table">
+      <tr>
+        <th width="15%">會員電話</th>
+        <th width="10%">商品數量</th>
+        <th width="10%">商品價格</th>
+        <th width="10%">保留時間</th>
+        <th width="55%">商品列表</th>
+      </tr>
+    </table>
+    <div id="retrieve_buttons">
+      <div id="retrieve_cancel" onclick="trades.retrieve_cancel()">取消</div>
+      <div id="retrieve_confirm" onclick="trades.retrieve_confirm()">確認</div>
+    </div>
+  </div>
+  <div id="selectItemWindow" style="display:none">
+    <table>
+      <tr>
+        <th>數量</th>
+        <th><i class="fa fa-minus fa-fw fa-3x" onclick="trades.amountMinusOne()"></i></th>
+        <th><i class="fa fa-plus fa-fw fa-3x" onclick="trades.amountAddOne()"></i></th>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>操作</th>
+        <th><i class="fa fa-trash fa-fw fa-3x" onclick="trades.deleteItem()"></i></th>
+        <th><i class="fa fa-check-circle fa-fw fa-3x" onclick="trades.confirmItemWindow()"></i></th>
+      </tr>
+    </table>
+  </div>
+  </div>
+  <audio id="auto" src="/static/alert.mp3" style="display:none"></audio>
+  <script src="static/counter/counter.js"></script>
+</body>
+
+</html>

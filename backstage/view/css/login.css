@@ -1,0 +1,98 @@
+* {
+	box-sizing: border-box
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	font-family: Roboto;
+	background: #f1f1f1;
+	margin: 0;
+	padding: 0;
+}
+.header{
+	width: 100%;
+	height: 10%
+}
+.headerpic{
+	width: 100%;
+	position: relative;
+}
+.logo{
+	position: absolute;
+	top: 3px;
+	left: 30px;
+	width: 12%
+}
+
+.content{
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+}
+#branch{
+	position: fixed;
+	left: 425px;
+	top: 112px;
+
+	width: 400px;
+	height: 70px;
+	border-radius: 20px;
+
+	font-size: 30px;
+	outline:none;
+}
+#username{
+	position: fixed;
+	left: 425px;
+	top: 226px;
+
+	width: 400px;
+	height: 70px;
+	border-radius: 20px;
+
+	font-size: 30px;
+	outline:none;
+}
+#password{
+	position: fixed;
+	left: 425px;
+	top: 340px;
+
+	width: 400px;
+	height: 70px;
+	border-radius: 20px;
+
+	font-size: 30px;
+	outline:none;
+}
+
+#submit{
+	position: fixed;
+	left: 550px;
+	top: 454px;
+
+	background: #274C77;
+	border: none; 
+	border-radius: 20px;
+	width: 150px;
+	height: 70px;
+
+	color: white;
+	font-size: 30px;
+	line-height: 70px;
+	text-align: center;
+	vertical-align: middle;
+	outline:none;
+}
+
+
+
+
+
+
+
+
+
+
